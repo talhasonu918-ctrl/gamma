@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GammaSweep | Premium B2B Sweepstakes Software</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'gamma-blue': '#485BFF',
+              'gamma-aquamarine': '#15F5BA',
+              'gamma-dust': '#96E9C6',
+              'dark-bg': '#050714',
+              'dark-card': 'rgba(26, 29, 61, 0.4)',
+            },
+            fontFamily: {
+              'roboto': ['Roboto', 'sans-serif'],
+            },
+            animation: {
+              'slow-pulse': 'slowPulse 8s ease-in-out infinite',
+              'float': 'float 4s ease-in-out infinite',
+              'reveal-up': 'revealUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'aurora': 'aurora 20s linear infinite',
+            },
+            keyframes: {
+              slowPulse: {
+                '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
+                '50%': { opacity: '0.7', transform: 'scale(1.1)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-15px)' },
+              },
+              revealUp: {
+                '0%': { opacity: '0', transform: 'translateY(40px) scale(0.98)' },
+                '100%': { opacity: '1', transform: 'translateY(0) scale(1)' },
+              },
+              aurora: {
+                'from': { transform: 'rotate(0deg)' },
+                'to': { transform: 'rotate(360deg)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        scroll-padding-top: 100px;
+      }
+      body {
+        font-family: 'Roboto', sans-serif;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+      
+      /* Premium Scrollbar */
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      .dark ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 10px; }
+      ::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.1); border-radius: 10px; }
+      ::-webkit-scrollbar-thumb:hover { background: #485BFF; }
+
+      .reveal {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(30px);
+        transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .glass {
+        backdrop-filter: blur(12px);
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .dark-glass {
+        backdrop-filter: blur(20px);
+        background: rgba(15, 17, 42, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      /* Animated Glow Gradients */
+      .aurora-bg {
+        position: absolute;
+        width: 150%;
+        height: 150%;
+        top: -25%;
+        left: -25%;
+        background: radial-gradient(circle at 50% 50%, #485BFF 0%, transparent 40%),
+                    radial-gradient(circle at 20% 80%, #15F5BA 0%, transparent 30%),
+                    radial-gradient(circle at 80% 20%, #485BFF 0%, transparent 35%);
+        filter: blur(80px);
+        opacity: 0.15;
+        z-index: -1;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.475.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
