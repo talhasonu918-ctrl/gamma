@@ -84,6 +84,7 @@ const Features: React.FC = () => {
             </div>
           ))}
         </div>
+        
 
         <div className="mt-24 p-16 bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-[4rem] text-center backdrop-blur-3xl relative overflow-hidden">
           <h3 className="text-3xl font-black uppercase mb-6 text-gray-900 dark:text-white tracking-tight">Experience Global Class Infrastructure</h3>
